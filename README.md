@@ -1,2 +1,2 @@
 # Demo
-Learning git 
+Learning about git repo
