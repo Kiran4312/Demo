@@ -1,0 +1,21 @@
+pipeline {
+    parameters {
+        string(name: 'CREDENTIALS_ID',
+            defaultValue: 'None',
+            description: 'creds',
+            trim: true)
+        string(name: 'Select',
+            defaultValue: 'None',
+            description: 'car model',
+            trim: true)
+        }
+    agent any
+    stages {
+        stage("Stage one") {
+            steps {
+                echo "Running DownStreamJob Job"
+                echo "car model:${Select} and ct:${CREDENTIALS_ID}"
+            }
+        }
+    }
+}
