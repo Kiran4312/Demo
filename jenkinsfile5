@@ -41,7 +41,7 @@ pipeline {
     }
     stage('stage 6:arciveartifacts') {
       steps {
-        archiveArtifacts artifacts: '.py', followSymlinks: false
+        archiveArtifacts artifacts: '**/*.py', followSymlinks: false
       }
     }
   }
