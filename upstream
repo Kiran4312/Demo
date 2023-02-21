@@ -1,8 +1,9 @@
 pipeline {
     stage {
         steps {
+            echo "Running Upsteam Job"
             build job: "my_downsteam_job_name",
-            parameters [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id')]
+            parameters [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id'), string(name: 'Select', value: '${Select_you_car_Model}')]
         }
     }
 }
