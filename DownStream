@@ -14,7 +14,7 @@ pipeline {
         stage("Stage one") {
             steps {
                 echo "Running DownStreamJob Job"
-                echo "car model:${Select} and ct:${CREDENTIALS_ID}"
+                echo "car model:${env.Select} and ct:${env.CREDENTIALS_ID}"
             }
         }
     }
