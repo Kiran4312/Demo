@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage {
+        stage("Stage one") {
             steps {
                 echo "Running Upsteam Job"
                 build job: "DownStream",
