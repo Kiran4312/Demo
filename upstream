@@ -1,9 +1,11 @@
 pipeline {
-    stage {
-        steps {
-            echo "Running Upsteam Job"
-            build job: "DownStream",
-            parameters [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id'), string(name: 'Select', value: '${Select_you_car_Model}')]
+    stages {
+        stage {
+            steps {
+                echo "Running Upsteam Job"
+                build job: "DownStream",
+                parameters [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id'), string(name: 'Select', value: '${Select_you_car_Model}')]
+            }
         }
     }
 }
