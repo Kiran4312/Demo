@@ -1,0 +1,8 @@
+pipeline {
+    stage {
+        steps {
+            build job: "my_downsteam_job_name",
+            parameters [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id')]
+        }
+    }
+}
