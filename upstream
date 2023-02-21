@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "Running Upsteam Job"
                 build job: "DownStream",
-                parameters: [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id'), string(name: 'Select', value: '${env.Select_you_car_Model}')]
+                parameters: [string(name: 'CREDENTIALS_ID', value: 'other_credentials_id'), string(name: 'Select', value: "${env.Select_you_car_Model}")]
             }
         }
     }
