@@ -35,7 +35,6 @@ pipeline {
             when {
                 allOf {
                     environment name:'STAGE', value: 'T4'
-                    branch 'main'
                     }
             }
             steps {
