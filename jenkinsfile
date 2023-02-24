@@ -34,7 +34,6 @@ pipeline {
         stage('Checking if selected value is T4') {
             when {
                 allOf {
-                        environment name:'STAGE', value: 'T4'
                         branch 'main'
                     }
             }
