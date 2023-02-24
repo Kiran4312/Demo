@@ -34,7 +34,7 @@ pipeline {
         stage('Checking if selected value is T4') {
             when {
                 allOf {
-                        branch 'main'; environment name:'STAGE', value: 'T4'
+                        branch 'new1'; environment name:'STAGE', value: 'T4'
                     }
             }
             steps {
