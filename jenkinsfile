@@ -33,8 +33,10 @@ pipeline {
         }
         stage('Checking if selected value is T4') {
             when {
-                environment name:'STAGE', value: 'T4'
-                branch 'main'
+                allOf {
+                    environment name:'STAGE', value: 'T4'
+                    branch 'main'
+                    }
             }
             steps {
                 echo "the Pipeline yet to be Implemented"
