@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} and buils status ${env.CURRENTBUILD.result}"
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} and buils status ${env.currentBuild.result}"
             }
         }
     }
