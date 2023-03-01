@@ -8,15 +8,12 @@ pipeline {
         }
     }
     post {
-        success {
+        always {
             sh 'shell.sh'
         }
         failure {
             script {
-                sh '''
-                |echo "This job failed"
-                |echo "And I am not sure why"
-                '''
+                sh 'echo "This job failed"'
             }
         }
     }
