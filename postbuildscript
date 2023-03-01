@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     post {
         success {
             sh 'shell.sh'
@@ -8,7 +9,7 @@ pipeline {
                 sh '''
                 |echo "This job failed"
                 |echo "And I am not sure why"
-                '''.stripMargin().stripIndent()
+                '''
             }
         }
     }
