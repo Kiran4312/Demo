@@ -9,7 +9,7 @@ pipeline {
     }
     post {
         always {
-            sh 'shell.sh'
+            sh 'echo "This job Success"'
         }
         failure {
             script {
