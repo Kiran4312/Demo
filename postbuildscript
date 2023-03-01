@@ -1,13 +1,15 @@
-post {
-    success {
-        sh 'shell.sh'
-    }
-    failure {
-        script {
-            sh '''
-            |echo "This job failed"
-            |echo "And I am not sure why"
-            '''.stripMargin().stripIndent()
+pipeline {
+    post {
+        success {
+            sh 'shell.sh'
+        }
+        failure {
+            script {
+                sh '''
+                |echo "This job failed"
+                |echo "And I am not sure why"
+                '''.stripMargin().stripIndent()
+            }
         }
     }
 }
