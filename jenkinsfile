@@ -37,7 +37,7 @@ pipeline {
                 branch 'new1'
             }
             steps {
-                echo "the Pipeline yet to be Implemented"
+                echo "this is from new1 branch Pipeline yet to be Implemented"
             }
            
         }
