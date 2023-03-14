@@ -30,3 +30,5 @@ def triangle(n):
 # Driver Code
 n = 5
 triangle(n)
+
+
