@@ -3,6 +3,7 @@ pipeline {
     parameters {
         choice(name:'STAGE', choices: ['T1', 'T2', 'T3', 'T4'], description: "Select the pipeline to run")
     }
+    
     stages {
         stage('Checking if selected value is T1') {
             when {
